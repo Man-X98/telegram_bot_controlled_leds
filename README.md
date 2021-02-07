@@ -10,8 +10,6 @@
     <li>5V powersupply</li>
     <li>Cables to put everything together</li>
   </ul>
-  <br>
-  <br>
   <h4> Integrated commands</h4>
   <ul>
   <li>"help" --> Returns a list of available commands</li>
