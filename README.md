@@ -23,4 +23,5 @@
   <li>"down" --> lowers brightness</li>
   <li>"up" --> raises brightness</li>
   <li>"full" --> sets leds to maximum brightness </li>
+  </ul>
   
