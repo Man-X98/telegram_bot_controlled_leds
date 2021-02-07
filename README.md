@@ -1,5 +1,5 @@
 # telegram_bot_controlled_leds
-<h1>COntroll your LEDs with a simple telegram bot </h1>
+<h1>Control your LEDs with a simple telegram bot </h1>
   <p>This simple NodeMCU sketch lets you control an addressable LED strip with up to two telegram bots with simple commands. 
     I did not find a good system yet to choose induvidual colors. All colors have to be programmed into the sketch. </p>
   
