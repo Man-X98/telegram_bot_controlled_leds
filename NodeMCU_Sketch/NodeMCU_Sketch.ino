@@ -60,43 +60,6 @@ void loop() {
       myBot.sendMessage(msg.sender.id, "Hi, this is comes from the bottom of yout heart\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
     }
 
-    //Heart flashes red, then returns to previous color
-    else if(msg.text.equalsIgnoreCase("love")){
-      for(int i=0;i<NUMOFLEDS;i++){
-      leds[i]= CRGB (  0, 0, 0);      
-      }
-      FastLED.show();
-      
-      delay(500);
-      
-      for (int j=0; j<50; j++){
-        for(int i=0;i<NUMOFLEDS;i++){
-          leds[i]= CRGB (  int(((255*dimmer)/50)*j), 0, 0);
-          }
-        FastLED.show();
-        delay(10);
-      }
-      
-      delay(500);
-      
-      for (int j=0; j<50; j++){
-        for(int i=0;i<NUMOFLEDS;i++){
-          leds[i]= CRGB (  int((255*dimmer)-(((255*dimmer)/50)*j)  ), 0, 0);
-          }
-        FastLED.show();
-        delay(10);        
-      }
-      
-      delay(1000);
-      
-      for(int i=0;i<NUMOFLEDS;i++){
-        leds[i]= CRGB (colors[0]*dimmer,colors[1]*dimmer,colors[2]*dimmer);
-          }
-      FastLED.show();
-      
-      myBot.sendMessage(msg.sender.id, "Love delivered.");
-    }
-
     //LEDs are changed according to command:
     else {
       myBot.sendMessage(msg.sender.id, setLEDs(msg.text));
@@ -112,43 +75,6 @@ void loop() {
     //Sned message with possible commands to user 
     if(msg2.text.equalsIgnoreCase("help")){
       secondBot.sendMessage(msg2.sender.id, "Hi, this is comes from the bottom of yout heart\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
-    }
-
-    //Heart flashes red, then returns to previous color
-    else if(msg2.text.equalsIgnoreCase("love")){
-      for(int i=0;i<NUMOFLEDS;i++){
-      leds[i]= CRGB (  0, 0, 0);      
-      }
-      FastLED.show();
-      
-      delay(500);
-      
-      for (int j=0; j<50; j++){
-        for(int i=0;i<NUMOFLEDS;i++){
-          leds[i]= CRGB (  int(((255*dimmer)/50)*j), 0, 0);
-          }
-        FastLED.show();
-        delay(10);
-      }
-      
-      delay(500);
-      
-      for (int j=0; j<50; j++){
-        for(int i=0;i<NUMOFLEDS;i++){
-          leds[i]= CRGB (  int((255*dimmer)-(((255*dimmer)/50)*j)  ), 0, 0);
-          }
-        FastLED.show();
-        delay(10);        
-      }
-      
-      delay(1000);
-      
-      for(int i=0;i<NUMOFLEDS;i++){
-        leds[i]= CRGB (colors[0]*dimmer,colors[1]*dimmer,colors[2]*dimmer);
-          }
-      FastLED.show();
-      
-      secondBot.sendMessage(msg2.sender.id, "Love delivered.");
     }
 
     //LEDs are changed according to command:
