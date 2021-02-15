@@ -22,7 +22,3 @@
   <li>"up" --> raises brightness</li>
   <li>"full" --> sets leds to maximum brightness </li>
   </ul>
-  
-  <p> There is also a special "love" command. I used this code together with the following print: https://www.prusaprinters.org/prints/41691-heart-shaped-lamp
-  The love command turns the lights off, then pulses red and resumes to the previous color. With this command and support for two telegram bots you can show your partner you are thinking of him/her while no being with them. Just delete that part if it's not what you are looking for ;)</p>
-  
