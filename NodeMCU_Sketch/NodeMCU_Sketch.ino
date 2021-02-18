@@ -57,7 +57,7 @@ void loop() {
 
     //Sned message with possible commands to user 
     if(msg.text.equalsIgnoreCase("help")){
-      myBot.sendMessage(msg.sender.id, "Hi, this is comes from the bottom of yout heart\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
+      myBot.sendMessage(msg.sender.id, "Hi, this is comes from the bottom of yout lamp\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
     }
 
     //LEDs are changed according to command:
@@ -74,7 +74,7 @@ void loop() {
 
     //Sned message with possible commands to user 
     if(msg2.text.equalsIgnoreCase("help")){
-      secondBot.sendMessage(msg2.sender.id, "Hi, this is comes from the bottom of yout heart\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
+      secondBot.sendMessage(msg2.sender.id, "Hi, this is comes from the bottom of yout lamp\n\nThe following colors are available:\nred\ngreen\nblue\npurple\nturquoise\n\n To manage brightness type:\n'down' to lower brightness\n'up' to raise brightness\n'full' to return to full brightness\n\nHave fun <3");
     }
 
     //LEDs are changed according to command:
@@ -150,7 +150,7 @@ String setLEDs(String message){
       leds[i]= CRGB (  0, 0, 0);
       FastLED.show();
     }
-    return "Heart now cold as stone..";
+    return "Lamp was turned off";
   }
 
   
@@ -160,7 +160,7 @@ String setLEDs(String message){
       leds[i]= CRGB (colors[0]*dimmer,colors[1]*dimmer,colors[2]*dimmer);
       FastLED.show();
     }
-    return "Heart is fading out.";
+    return "Brightness lowered";
   }
 
   else if(message.equalsIgnoreCase("up")){
@@ -172,7 +172,7 @@ String setLEDs(String message){
       leds[i]= CRGB (colors[0]*dimmer,colors[1]*dimmer,colors[2]*dimmer);
       FastLED.show();
     }
-    return "A little more love.";
+    return "Brightness raised";
   }
 
   else if(message.equalsIgnoreCase("full")){
@@ -181,7 +181,7 @@ String setLEDs(String message){
       leds[i]= CRGB (colors[0],colors[1],colors[2]);
       FastLED.show();
     }
-    return "Full on love.";
+    return "maximum Brightness";
   }
 
   else{
