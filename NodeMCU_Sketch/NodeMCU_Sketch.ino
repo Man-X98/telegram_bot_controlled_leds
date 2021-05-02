@@ -21,10 +21,10 @@ void setup() {
   //initialize LEDs
   FastLED.addLeds<WS2812, LEDPIN, GRB>(leds, NUMOFLEDS); 
   //clear LEDs;
-  for(int i=0;i<NUMOFLEDS;i++){
-      leds[i]= CRGB (  0, 0, 0);
-      FastLED.show();
-    }
+//  for(int i=0;i<NUMOFLEDS;i++){
+//     leds[i]= CRGB (  0, 0, 0);
+//      FastLED.show();
+//    }
     
   // initialize the Serial
   Serial.begin(115200);
